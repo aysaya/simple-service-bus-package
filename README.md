@@ -9,8 +9,9 @@ create implementation of the IProcessMessage<T>
 ```
 public class ThirdPartyRateProcessor : IProcessMessage<ThirdPartyRate>
 {..}
-
+```
 in Startup.cs inject the dependencies: 
+```  
 services.AddQueueHandler<ThirdPartyRate, ThirdPartyRateProcessor> (connectionString, queueName);
 services.AddTopicSender<NewQuoteReceived>(connectionString, topicName);
 .
