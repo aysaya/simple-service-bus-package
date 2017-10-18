@@ -6,7 +6,7 @@
 
 ## sample usage
 create implementation of the IProcessMessage<T>
-
+```
 public class ThirdPartyRateProcessor : IProcessMessage<ThirdPartyRate>
 {..}
 
@@ -16,5 +16,5 @@ services.AddTopicSender<NewQuoteReceived>(connectionString, topicName);
 .
 .
 app.RegisterHandler<ThirdPartyRate>(serviceProvider);
-
+```
 
